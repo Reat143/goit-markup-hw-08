@@ -1,0 +1,20 @@
+// Utils/base
+@import "./utils/variables";
+@import "./utils/visually-hidden";
+@import "./base/common";
+@import "./base/reset";
+
+// WebStudio - main page
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./layouts/advantages";
+@import "./layouts/activities";
+@import "./layouts/team";
+@import "./layouts/clients";
+@import "./layouts/footer";
+
+// Modal
+@import "./layouts/modal";
+
+// WebStudio - portfolio
+@import "./layouts/portfolio-main";
