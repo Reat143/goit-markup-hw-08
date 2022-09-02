@@ -1,25 +1,36 @@
-.clients {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
 .clients__title {
+    margin-bottom: 30px;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
+    font-size: 28px;
+    line-height: 1.18;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-color);
-    margin-bottom: 50px;
+    @include desktop {
+            margin-bottom: 50px;
+            font-size: 36px;
+            line-height: 1.17;
+        }
 }
 .clients-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     list-style: none;
     gap: 30px;
 }
 .clients-list__item {
-    width: 170px;
+    width: 210px;
     height: 92px;
+    @include mobile {
+        width: calc((100% - 30px) / 2);
+    }
+    @include tablet {
+        width: calc((100% - 60px) / 3);
+    }
+    @include desktop {
+        width: calc((100% - 150px) / 6);
+    }
 }
 .clients-list__link {
     display: flex;
