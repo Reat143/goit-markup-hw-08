@@ -1,5 +1,9 @@
 .activity {
     padding-top: 0;
+    display: none;
+    @include desktop {
+        display: flex;
+    }
 }
 .activity__title {
     text-align: center;
