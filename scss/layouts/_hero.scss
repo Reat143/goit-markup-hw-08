@@ -5,14 +5,21 @@
     width: 100%;
     height: auto;
     text-align: center;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-background.jpg);
+    background-image: var(--bg-gradient), url(../images/hero-background-mobile.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url();
+        }
     background-color: var(--hero-bg-color);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    @include tablet {
+            background-image: var(--bg-gradient), url(../images/hero-background-tablet.jpg);
+        }
     @include desktop {
         padding: 200px 0;
         max-width: 1600px;
+        background-image: var(--bg-gradient), url(../images/hero-background.jpg);
     }
 }
 .hero__title {
