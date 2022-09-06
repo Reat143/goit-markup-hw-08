@@ -5,21 +5,27 @@
     width: 100%;
     height: auto;
     text-align: center;
-    background-image: var(--bg-gradient), url(../images/hero-background-mobile.jpg);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: url();
+    background-image: var(--bg-gradient), url(../images/hero-bg-mob.jpg);
+    @include retina {
+        background-image: var(--bg-gradient), url(../images/hero-bg-mob-2x.jpg);
         }
     background-color: var(--hero-bg-color);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     @include tablet {
-            background-image: var(--bg-gradient), url(../images/hero-background-tablet.jpg);
+            background-image: var(--bg-gradient), url(../images/hero-bg-tab.jpg);
+            @include retina {
+                    background-image: var(--bg-gradient), url(../images/hero-bg-tab-2x.jpg);
+                }
         }
     @include desktop {
         padding: 200px 0;
         max-width: 1600px;
-        background-image: var(--bg-gradient), url(../images/hero-background.jpg);
+        background-image: var(--bg-gradient), url(../images/hero-bg.jpg);
+        @include retina {
+                background-image: var(--bg-gradient), url(../images/hero-bg-2x.jpg);
+            }
     }
 }
 .hero__title {
