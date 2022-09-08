@@ -43,15 +43,12 @@ body {
 
 .container {
   width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .container {
     width: 480px;
   }
@@ -74,6 +71,14 @@ section {
   section {
     padding: 94px 0;
   }
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
 }
 
 img {
@@ -119,6 +124,12 @@ ul {
   text-decoration: none;
   color: var(--black);
 }
+@media screen and (max-width: 767px) {
+  .nav__logo {
+    display: block;
+    margin: 16px 0;
+  }
+}
 
 .nav__logo-text {
   color: var(--accent-color);
@@ -128,6 +139,11 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+@media screen and (max-width: 767px) {
+  .nav-list {
+    display: none;
+  }
 }
 
 .nav-list .nav-list__item {
@@ -187,6 +203,11 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+@media screen and (max-width: 767px) {
+  .header-list {
+    display: none;
+  }
+}
 
 .header-list .header-list__item {
   margin-right: 50px;
@@ -214,6 +235,125 @@ ul {
 .header-list__icon {
   margin-right: 10px;
   fill: currentColor;
+}
+
+.menu-open-btn {
+  position: absolute;
+  top: 22px;
+  right: 23px;
+  background-color: var(--white);
+  border: none;
+}
+.menu-open-btn__icon {
+  background-color: var(--white);
+  border: none;
+}
+
+.mob-menu {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  padding: 48px 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white);
+}
+.mob-menu > .container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu-close-btn {
+  position: absolute;
+  top: 21px;
+  right: 25px;
+  fill: var(--title-color);
+  background-color: var(--white);
+  border: none;
+}
+.menu-close-btn:hover, .menu-close-btn:focus {
+  fill: var(--accent-color);
+}
+
+.mob-menu_list {
+  list-style: none;
+}
+
+.mob-menu_list__item {
+  margin-bottom: 32px;
+}
+.mob-menu_list__item__item:last-child {
+  margin-bottom: 0;
+}
+
+.mob-menu_list__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--title-color);
+}
+.mob-menu_list__link[title] {
+  color: var(--accent-color);
+}
+.mob-menu_list__link:hover, .mob-menu_list__link:focus {
+  color: var(--accent-color);
+}
+
+.mob-menu-contacts {
+  list-style: none;
+  margin-bottom: 64px;
+}
+
+.mob-menu-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-menu-contacts__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+}
+
+.tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+.mob-menu-soc__link {
+  text-decoration: none;
+  margin-right: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+.mob-menu-soc__link:last-child {
+  margin: 0;
+}
+.mob-menu-soc__link:not(:last-child)::after {
+  content: "";
+  padding-left: 10px;
+  height: 22px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .hero {
@@ -269,7 +409,7 @@ ul {
   text-transform: uppercase;
   color: var(--white);
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .hero__title {
     width: 360px;
   }
@@ -319,7 +459,7 @@ ul {
   width: 100%;
   height: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .advantages-list__item {
     width: 450px;
   }
@@ -474,7 +614,7 @@ ul {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .team-list__item {
     width: 480px;
   }
@@ -499,7 +639,7 @@ ul {
 .team-list__form {
   padding: 30px 0;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .team-list__form {
     padding: 30px 122px 24px 122px;
   }
@@ -618,7 +758,7 @@ ul {
   width: 210px;
   height: 92px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .clients-list__item {
     width: calc((100% - 30px) / 2);
   }
@@ -942,7 +1082,7 @@ ul {
 .footer-subscription__input:focus {
   outline-color: 1px solid rgba(255, 255, 255, 0.3);
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .footer-subscription__input {
     width: 450px;
   }
@@ -1015,7 +1155,7 @@ ul {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .modal {
     width: 450px;
   }
@@ -1220,7 +1360,7 @@ ul {
   letter-spacing: 0.03em;
   color: var(--main-text-color);
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .check-text {
     font-size: 12px;
     line-height: 1.71;
@@ -1262,7 +1402,7 @@ ul {
   letter-spacing: 0.03em;
   color: var(--accent-color);
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .check-link {
     font-size: 12px;
     line-height: 1.71;
@@ -1391,7 +1531,7 @@ ul {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .filter-item-list__item {
     width: 450px;
   }

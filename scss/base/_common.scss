@@ -1,36 +1,41 @@
 body {
-    font-family: var(--main-font);
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: var(--main-text-color);
-    background-color: var(--white);
+  font-family: var(--main-font);
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+  background-color: var(--white);
 }
 .container {
-    width: 100%;
-    align-items: center;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    @include mobile {
-        width: 480px;
-    }
-    @include tablet {
-        width: 768px;
-    }
-    @include desktop {
-        width: 1200px;
-    }
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  @include mobile {
+    width: 480px;
+  }
+  @include tablet {
+    width: 768px;
+  }
+  @include desktop {
+    width: 1200px;
+  }
 }
 section {
-    padding: 60px 0;
-    @include desktop {
-        padding: 94px 0;
-    }
+  padding: 60px 0;
+  @include desktop {
+    padding: 94px 0;
+  }
+}
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
 }
 img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
