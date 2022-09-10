@@ -101,13 +101,15 @@
   margin-right: 10px;
   fill: currentColor;
 }
-.menu-open-btn {
+.open-menu-btn {
   position: absolute;
   top: 22px;
   right: 23px;
   background-color: var(--white);
   border: none;
+  transition: var(--main-animation);
   &__icon {
+    transition: var(--main-animation);
     background-color: var(--white);
     border: none;
   }
@@ -121,22 +123,30 @@
   width: 100vw;
   height: 100vh;
   background-color: var(--white);
+  transition: var(--main-animation);
   > .container {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
 }
-.menu-close-btn {
+.close-menu-btn {
   position: absolute;
-  top: 21px;
-  right: 25px;
+  top: 0;
+  right: 0;
   fill: var(--title-color);
   background-color: var(--white);
   border: none;
+  transition: var(--main-animation);
   &:hover,
   &:focus {
+    transition: var(--main-animation);
     fill: var(--accent-color);
   }
 }
