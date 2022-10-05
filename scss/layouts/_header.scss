@@ -4,37 +4,39 @@
 }
 .nav {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   &__logo {
-    margin-right: 93px;
+    display: block;
+    padding-top: 16px;
+    padding-bottom: 16px;
     font-family: var(--secondary-font);
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
     text-decoration: none;
     color: var(--black);
-    @include mobile {
-      display: block;
-      margin: 16px 0;
-    }
   }
 }
 .nav__logo-text {
   color: var(--accent-color);
 }
 .nav-list {
-  display: flex;
-  @include mobile {
-    display: none;
+  display: none;
+  @include tablet {
+    display: flex;
+    margin-left: auto;
+  }
+  @include desktop {
+    margin-left: 93px;
   }
 }
 .nav-list .nav-list__item {
   margin-right: 50px;
   padding-top: 32px;
   padding-bottom: 32px;
-  .nav-list &:last-child {
-    margin-right: 0;
-  }
+}
+.nav-list__item:last-child {
+  margin-right: 0;
 }
 .nav .nav-list__item {
   font-weight: 500;
@@ -69,21 +71,30 @@
   }
 }
 .header-list {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  @include mobile {
-    display: none;
+  display: none;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 150px;
+    align-items: center;
+    margin-left: auto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+  @include desktop {
+    flex-wrap: nowrap;
+    max-width: none;
   }
 }
 .header-list .header-list__item {
-  margin-right: 50px;
-  .header-list &:last-child {
-    margin-right: 0;
+  margin-bottom: 10px;
+  @include desktop {
+    margin: 0 50px 0 0;
+    .header-list &:last-child {
+      margin-right: 0;
+    }
   }
 }
 .header-list__link {
@@ -98,8 +109,11 @@
   }
 }
 .header-list__icon {
-  margin-right: 10px;
+  margin-right: 8px;
   fill: currentColor;
+  @include desktop {
+    margin-right: 10px;
+  }
 }
 .open-menu-btn {
   position: absolute;
@@ -112,6 +126,9 @@
     transition: var(--main-animation);
     background-color: var(--white);
     border: none;
+  }
+  @include tablet {
+    display: none;
   }
 }
 .mob-menu {
@@ -138,8 +155,8 @@
 }
 .close-menu-btn {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 21px;
+  right: 21px;
   fill: var(--title-color);
   background-color: var(--white);
   border: none;
@@ -191,16 +208,19 @@
 }
 .tel {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 25px;
   line-height: 1.18;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+  @include mobile {
+    font-size: 34px;
+  }
 }
 .mob-menu-soc__link {
   text-decoration: none;
   margin-right: 10px;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 13px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color);
@@ -212,5 +232,8 @@
     padding-left: 10px;
     height: 22px;
     border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+  @include mobile {
+    font-size: 18px;
   }
 }
