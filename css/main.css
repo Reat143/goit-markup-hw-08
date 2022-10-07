@@ -594,6 +594,9 @@ ul {
   display: -ms-flexbox;
   display: flex;
 }
+.activity-list__img {
+  display: block;
+}
 
 .activity-list__item {
   position: relative;

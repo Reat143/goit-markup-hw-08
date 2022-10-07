@@ -15,6 +15,9 @@
 }
 .activity-list {
   display: flex;
+  &__img {
+    display: block;
+  }
 }
 .activity-list__item {
   position: relative;
