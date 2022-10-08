@@ -26,10 +26,10 @@
 }
 .footer-contacts {
   display: block;
-  //   margin: 0 0 60px 0;
-  //   @include tablet {
-  //     margin: 0 165px 0 0;
-  //   }
+  margin-bottom: 60px;
+  @include tablet {
+    margin-bottom: 0;
+  }
   @include desktop {
     width: 231px;
     justify-content: flex-start;
