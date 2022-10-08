@@ -2,6 +2,9 @@
   background-color: var(--white);
   border-bottom: 1px solid var(--border-color);
 }
+.header__container {
+  position: relative;
+}
 .nav {
   display: flex;
   align-items: center;
@@ -79,22 +82,20 @@
     align-items: center;
     margin-left: auto;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.14;
     letter-spacing: 0.02em;
   }
   @include desktop {
+    font-size: 14px;
     flex-wrap: nowrap;
     max-width: none;
   }
 }
-.header-list .header-list__item {
+.header-list .header-list__item:not(:last-child) {
   margin-bottom: 10px;
   @include desktop {
     margin: 0 50px 0 0;
-    .header-list &:last-child {
-      margin-right: 0;
-    }
   }
 }
 .header-list__link {
